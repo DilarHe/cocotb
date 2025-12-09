@@ -1,0 +1,61 @@
+__CONV1
+    _ifmap_p
+    _ofmap_p
+    _filter_p
+    _bias_p
+    _quant_p
+    _inner_cnt
+    _outer_cnt
+    _out_x
+__DEPTHWISE_CONV_FUN
+    _ifmap_start_p
+    _filter_start_p
+    _conv_width
+    _bias_p
+    _quant_p
+    _ofmap_p
+    _fmap_fifo_start_p
+    _fmap_fifo_end_p
+    _outer_cnt
+__SKIP_ADD
+    _sk_ifmap1_p
+    _sk_ifmap2_p
+    _sk_params_p
+    _sk_ofmap_p
+__IBB1
+    _c1_ifmap_p
+    _c1_ofmap_p
+    _c1_out_x
+    _dw_ifmap_p
+    _ibb_conv_cnt
+__SMOUT
+    _ln2_p
+    _numerator_0
+    _numerator_1
+    _numerator_2
+    _numerator_3
+    _numerator_4
+    _numerator_5
+    _numerator_6
+    _numerator_7
+    _numerator_8
+    _denominator
+__TOPCTRL
+    _max_index_now
+    _max_value_now
+    _max_index_last
+    _wake_count
+    _block_count
+    _kws_output
+__KWS_CONFIG
+    _kwscfg_threshold_0
+    _kwscfg_threshold_1
+    _kwscfg_threshold_2
+    _kwscfg_threshold_3
+    _kwscfg_threshold_4
+    _kwscfg_threshold_5
+    _kwscfg_threshold_6
+    _kwscfg_block_num_group_0
+    _kwscfg_block_num_group_1
+    _kwscfg_eva_num_group_0
+    _kwscfg_eva_num_group_1

@@ -1,0 +1,13 @@
+rg_rnn_ifmap_groupnum,3
+rg_rnn_hidden_groupnum_layer_0,1
+rg_rnn_hidden_groupnum_layer_1,1
+rg_cache_ofmap_base_addr,20
+rg_rnn_fc_label_num,2
+rg_rnn_bias_addr_layer_0,0
+rg_rnn_bias_addr_layer_1,52
+rg_rnn_whi_addr_layer_0,4
+rg_rnn_whi_addr_layer_1,56
+rg_rnn_whh_addr_layer_0,36
+rg_rnn_whh_addr_layer_1,72
+rg_rnn_fc_bias_addr,88
+rg_rnn_fc_weight_addr,90

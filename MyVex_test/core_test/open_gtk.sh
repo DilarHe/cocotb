@@ -1,0 +1,1 @@
+gtkwave --save ./Core.gtkw  &

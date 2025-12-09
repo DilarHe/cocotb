@@ -1,0 +1,83 @@
+// Generator : SpinalHDL v1.8.0    git head : 4e3563a282582b41f4eaafc503787757251d23ea
+// Component : RoundandSat_3
+// Git hash  : 85ee573ec2fdedb6c3867ea06589ef2968a1a761
+
+`timescale 1ns/1ps 
+module RoundandSat_3 (
+  input      [24:0]   din,
+  output     [15:0]   dout
+);
+
+  wire       [25:0]   tmp_tmp_dataOut_5;
+  wire       [25:0]   tmp_tmp_dataOut_5_1;
+  wire       [12:0]   tmp_when;
+  wire       [12:0]   tmp_tmp_dataOut_7;
+  wire       [12:0]   tmp_tmp_dataOut_7_1;
+  wire       [25:0]   tmp_tmp_dataOut_1;
+  wire       [25:0]   tmp_tmp_dataOut_1_1;
+  wire       [25:0]   tmp_tmp_dataOut_1_2;
+  wire       [1:0]    tmp_when_1;
+  wire       [0:0]    tmp_when_2;
+  (* keep *) wire       [15:0]   dataOut;
+  wire       [24:0]   tmp_dataOut;
+  reg        [12:0]   tmp_dataOut_1;
+  wire       [24:0]   tmp_dataOut_2;
+  wire       [24:0]   tmp_dataOut_3;
+  wire       [24:0]   tmp_dataOut_4;
+  wire       [25:0]   tmp_dataOut_5;
+  wire       [24:0]   tmp_dataOut_6;
+  reg        [12:0]   tmp_dataOut_7;
+  reg        [11:0]   tmp_dataOut_8;
+
+  assign tmp_tmp_dataOut_5 = {tmp_dataOut_4[24],tmp_dataOut_4};
+  assign tmp_tmp_dataOut_5_1 = {tmp_dataOut_3[24],tmp_dataOut_3};
+  assign tmp_when = tmp_dataOut_5[12 : 0];
+  assign tmp_tmp_dataOut_7 = tmp_dataOut_5[25 : 13];
+  assign tmp_tmp_dataOut_7_1 = 13'h0001;
+  assign tmp_tmp_dataOut_1 = ($signed(tmp_tmp_dataOut_1_1) + $signed(tmp_tmp_dataOut_1_2));
+  assign tmp_tmp_dataOut_1_1 = {tmp_dataOut_6[24],tmp_dataOut_6};
+  assign tmp_tmp_dataOut_1_2 = {tmp_dataOut_2[24],tmp_dataOut_2};
+  assign tmp_when_1 = tmp_dataOut_1[12 : 11];
+  assign tmp_when_2 = tmp_dataOut_1[11 : 11];
+  assign tmp_dataOut = din; // @[BaseType.scala 318:22]
+  assign tmp_dataOut_2 = {{12'h0,1'b1},12'h0}; // @[BaseType.scala 318:22]
+  assign tmp_dataOut_3 = {13'h1fff,12'h0}; // @[BaseType.scala 318:22]
+  assign tmp_dataOut_4 = tmp_dataOut[24 : 0]; // @[BaseType.scala 299:24]
+  assign tmp_dataOut_5 = ($signed(tmp_tmp_dataOut_5) + $signed(tmp_tmp_dataOut_5_1)); // @[BaseType.scala 299:24]
+  assign tmp_dataOut_6 = tmp_dataOut[24 : 0]; // @[BaseType.scala 299:24]
+  always @(*) begin
+    if((|tmp_when)) begin
+      tmp_dataOut_7 = ($signed(tmp_tmp_dataOut_7) + $signed(tmp_tmp_dataOut_7_1)); // @[SInt.scala 193:11]
+    end else begin
+      tmp_dataOut_7 = tmp_dataOut_5[25 : 13]; // @[SInt.scala 195:11]
+    end
+  end
+
+  always @(*) begin
+    if(tmp_dataOut_5[25]) begin
+      tmp_dataOut_1 = tmp_dataOut_7; // @[SInt.scala 339:11]
+    end else begin
+      tmp_dataOut_1 = (tmp_tmp_dataOut_1 >>> 13); // @[SInt.scala 341:11]
+    end
+  end
+
+  always @(*) begin
+    if(tmp_dataOut_1[12]) begin
+      if((! (&tmp_when_1))) begin
+        tmp_dataOut_8 = 12'h800; // @[SInt.scala 133:13]
+      end else begin
+        tmp_dataOut_8 = tmp_dataOut_1[11 : 0]; // @[SInt.scala 135:13]
+      end
+    end else begin
+      if((|tmp_when_2)) begin
+        tmp_dataOut_8 = 12'h7ff; // @[SInt.scala 139:13]
+      end else begin
+        tmp_dataOut_8 = tmp_dataOut_1[11 : 0]; // @[SInt.scala 141:13]
+      end
+    end
+  end
+
+  assign dataOut = {{tmp_dataOut_8[11],{tmp_dataOut_8[11],{tmp_dataOut_8[11],tmp_dataOut_8[11]}}},tmp_dataOut_8}; // @[RoundandSat.scala 22:13]
+  assign dout = dataOut; // @[RoundandSat.scala 26:11]
+
+endmodule

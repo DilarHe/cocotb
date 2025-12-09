@@ -1,0 +1,89 @@
+{
+  "mem": { 
+      "stack"           : 128,
+      "fbank"           : 1920,
+      "act"             : 1600,
+      "weight"          : 12800
+    },
+  "nn": {
+      "conv00_w"        : [16,3,32],
+      "conv00_b"        : [3,16],
+      "conv00_q"        : [1,3],
+
+      "conv10_w"        : [48,1,16],
+      "conv10_b"        : [1,48],
+      "conv10_q"        : [1,3],
+      "conv11_w"        : [1,9,48],
+      "conv11_b"        : [1,48],
+      "conv11_q"        : [1,3],
+      "conv12_w"        : [16,1,48],
+      "conv12_b"        : [1,16],
+      "conv12_q"        : [1,3],
+      "conv13_w"        : [16,1,16],
+      "conv13_b"        : [1,16],
+      "conv13_q"        : [1,3],
+      "ibb0_skipadd"    : [1,6],
+
+      "conv20_w"        : [48,1,16],
+      "conv20_b"        : [1,48],
+      "conv20_q"        : [1,3],
+      "conv21_w"        : [1,9,48],
+      "conv21_b"        : [1,48],
+      "conv21_q"        : [1,3],
+      "conv22_w"        : [16,1,48],
+      "conv22_b"        : [1,16],
+      "conv22_q"        : [1,3],
+      "ibb1_skipadd"    : [1,6],
+
+      "conv30_w"        : [48,1,16],
+      "conv30_b"        : [1,48],
+      "conv30_q"        : [1,3],
+      "conv31_w"        : [1,9,48],
+      "conv31_b"        : [1,48],
+      "conv31_q"        : [1,3],
+      "conv32_w"        : [16,1,48],
+      "conv32_b"        : [1,16],
+      "conv32_q"        : [1,3],
+      "conv33_w"        : [16,1,16],
+      "conv33_b"        : [1,16],
+      "conv33_q"        : [1,3],
+      "ibb2_skipadd"    : [1,6],
+
+      "conv40_w"        : [48,1,16],
+      "conv40_b"        : [1,48],
+      "conv40_q"        : [1,3],
+      "conv41_w"        : [1,9,48],
+      "conv41_b"        : [1,48],
+      "conv41_q"        : [1,3],
+      "conv42_w"        : [16,1,48],
+      "conv42_b"        : [1,16],
+      "conv42_q"        : [1,3],
+      "ibb3_skipadd"    : [1,6],
+
+      "avgpool_q"       : [1,3],
+      
+      "linear_w"        : [9,1,16],
+      "linear_b"        : [1,9],
+      "linear_q"        : [1,3],
+
+      "softmax_q"       : [1,8]
+  },
+  
+  "fbank_qat": {
+    "PCMInList"         : [1,16,15],
+    "FFTList"           : [1,16,10],
+    "FFTWinList"        : [1,16,15],
+    "PowList"           : [1,22,10],
+    "MelList"           : [1,22,14],
+    "CordicCoefList"    : [1,16,12],
+    "CordicList"        : [1,16,10],
+    "FbankList"         : [0,8,0]
+  },
+
+  "NN_input_qat": {
+    "scale"             : 38469,
+    "zeropoint"         : 121,
+    "shift"             : 10
+  }
+
+}

@@ -1,0 +1,37 @@
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_sbiu.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_begen.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_regblockif.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_busmux.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_commonregs.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_ch_top.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_ch_src_sm.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_ch_dst_sm.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_channelregs.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_ch_tfr_ctrl.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_ch_first.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_ch_dmux.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_fifo_top.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_fifo_ctrl.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_fifo.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_bcm06.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_bcm57.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_mi_to_ch_mux.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_ch_to_mi_mux.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_central_tfr_ctl.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_master_top.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_mbiu.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_arb_top.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_arb_req_mi.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_arb_mask.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_arbiter_dp.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_bcm52.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_bcm01.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/i_dmac/src/DW_minmax.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_mst_endian.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_lock_clr.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_hs.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_regs.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/ahb_dmac_127/src/DW_ahb_dmac_intrif.v
+read_verilog -sv -formal -overwrite {workspace}/AHB_dmac_tb/i_dmac/src/DW_ahb_dmac.v
+design -reset-vlog; proc;
+write_json {workspace}/netlist/DW_ahb_dmac.json
